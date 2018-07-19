@@ -1,0 +1,9 @@
+mongoose
+mongdoDB을 마치 SQL 비슷하게 
+사용할수 있도록 도와주는 플러그인
+mongoDB : NoSQL 방식이어서
+기본형으로 nodejs 사용하려면 상당히
+불편하다.
+
+ORM(Object Relation Model) 이라는
+형식으로 사용 할수 있게 도와주는 도구

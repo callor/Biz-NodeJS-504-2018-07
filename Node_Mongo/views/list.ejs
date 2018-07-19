@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<table>
+	<tr>
+		<th>사용자명</th>
+		<th>비밀번호</th>
+		<th>전화번호</th>
+		<th>나이</th>
+	</tr>
+	<% users.forEach(function(item){ %>
+	<tr>
+		<td>
+		<a href="/update/<%- item._id %>">
+		<%- item.username %>
+		</a>
+		</td>
+		<td><%- item.password %></td>
+		<td><%- item.tel %></td>
+		<td><%- item.age %></td>
+	</tr>
+	<% }) %>
+
+</table>
+</body>
+</html>

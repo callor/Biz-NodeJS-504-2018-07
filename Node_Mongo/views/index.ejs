@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+	<form method="POST" action="/insert">
+	<input type="hidden" 
+		id="_id" name="_id" 
+		value="<%- user._id %>">
+	<p><label>이름</label>
+	<input type="text" 
+		id="username" 
+		name="username"
+		value="<%- user.username %>">
+	
+	<p><label>비밀번호</label>
+	<input value="<%- user.password %>" type="text" id="password" name="password">
+
+	<p><label>전화</label>
+	<input value="<%- user.tel %>" type="text" id="tel" name="tel">
+	
+	<p><label>나이</label>
+	<input value="<%- user.age %>" type="text" id="age" name="age">
+	<button>저장</button>
+	</form>
+  </body>
+</html>

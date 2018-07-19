@@ -1,0 +1,11 @@
+npm install -save cookie-parser
+npm install -save debug
+npm install -save ejs
+npm install -save express
+npm install -save http-errors
+npm install -save morgan
+npm install -express-session
+
+npm install -save mongoose
+
+npm install
