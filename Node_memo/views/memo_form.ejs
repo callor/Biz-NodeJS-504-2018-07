@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<% include include/head.html %>
+</head>
+<body>
+<% include include/header.html %>
+<section>
+	<article>
+	<h3>메모등록</h3>
+	<form action="/memo" method="post">
+		<label>member_ID</label>
+		<input class="w3-input" type="text" 
+			id="writer"	name="writer" value="<%- login._id %>">
+
+		<label>회원ID</label>
+		<input class="w3-input" type="text" 
+			id="userid"	name="userid" value="<%- login.userid %>">
+			
+		<label>회원이름</label>
+		<input class="w3-input" type="text" 
+			id="username"	name="username" value="<%- login.username %>">
+		
+		<label>제목</label>
+		<input class="w3-input" type="text" 
+			id="subject"	name="subject" value="<%- memo.subject %>">
+
+		<label>메모</label>
+		<textarea id="memo" name="memo"
+		class='w3-input' rows=5><%- memo.memo %></textarea>
+		<button>저장</button>
+	</form>	
+	
+	</article>
+</section>
+
+</body>
+</html>

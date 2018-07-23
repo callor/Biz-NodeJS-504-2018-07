@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="/insert" method="POST">
+		<input type="hidden" id="_id" name="_id"
+			value="<%- mvo._id %>">
+		<p>
+			<label>회원ID</label> 
+			<input type="text" id="userid" name="userid"
+			value="<%- mvo.userid %>">
+		<p>
+			<label>비밀번호</label> 
+			<input type="password" id="password"
+				name="password" value="<%- mvo.password %>">
+		<p>
+			<label>회원이름</label> 
+			<input type="text" id="username" name="username"
+			value="<%- mvo.username %>">
+		<p>
+			<label>나이</label> 
+			<input type="text" id="age" name="age"
+			value="<%- mvo.age %>">
+		<p><button>회원가입</button>
+	</form>
+</body>
+</html>
