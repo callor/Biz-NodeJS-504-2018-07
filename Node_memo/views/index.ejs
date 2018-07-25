@@ -6,10 +6,21 @@
   <body class="w3-container">
 	<% include include/header.html %>
 	<section>
-		<article>
-			
+		<article class="w3-row w3-padding">
+			<% 
+			if(typeof memoList == "object" && memoList ) {
+				memoList.forEach(function(memo){ %>
+					<div class="w3-card-2 w3-col m3 l3 w3-padding w3-margin">
+						<div class="w3-container">
+							<b><a href="/edit/<%- memo._id %>"><%- memo.subject %></a></b>
+							<p class="w3-border"><%- memo.memo %></p>					
+						</div>
+						<div class='w3-right'><span><a href="/delete/<%- memo._id %>">삭제</a></span></div>				
+					</div>
+			<% }) } else { %>
+				<div><h3>메모가 없습니다<h3></div>
+			<% } %>
 		</article>
-	
 	</section>
   </body>
 </html>
