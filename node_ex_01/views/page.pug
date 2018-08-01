@@ -1,0 +1,8 @@
+include include/head.pug
+
+
+body
+	article.container
+		ul.pagination
+			each page,index in pages
+				li.page-item: a(href='#').page-link. #{page}
