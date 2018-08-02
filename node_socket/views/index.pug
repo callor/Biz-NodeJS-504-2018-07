@@ -1,0 +1,12 @@
+include include/head.pug
+
+body.container
+	section
+		if !body
+			h2 나의 채팅방에 오신 것을 환영합니다
+			
+		else if body == 'chat'
+			include body/chat.pug
+			
+		else if body == 'login'
+			include body/login.pug

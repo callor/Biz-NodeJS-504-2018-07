@@ -1,0 +1,6 @@
+include include/head.pug
+
+body.container
+	form(action='/update',method='post',enctype='multipart/form-data')
+		input(type='file',name='excel', accept='.xlsx')
+		button 전송
