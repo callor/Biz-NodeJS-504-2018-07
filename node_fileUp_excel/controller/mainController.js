@@ -29,6 +29,30 @@ var upload = multer({storage:saveStorage}).single('excel')
 module.exports = (app)=>{
 	var parseExcel = require('xlsx')
 	
+	app.post('/excel',(req,res)=>{
+		upload(req,res,(err)=>{
+			if(req.file != undefined) {
+				let fileName = path.join(filePath,req.file.filename)
+				var model = null
+				mongoExcel.xlsx2MongoData(fileName,model,(err,data)=>{
+					db.addr.insert(data,(err,doc)=>{
+						res.render('index',{body:'excel', excel:data})
+					})
+				})
+			}
+		})
+	})
+	
+	app.get('/file',(req,res)=>{
+		res.render('index',{body:'file'})
+	})
+	app.get('/list',(req,res)=>{
+		db.addr.find({},(err,data)=>{
+//			res.json(data)
+			res.render('index',{body:'excel', excel:data})
+		})
+	})
+	
 	app.post('/update',(req,res)=>{
 		upload(req,res,(err)=>{
 			if(req.file != undefined) {

@@ -1,6 +1,13 @@
 include include/head.pug
 
 body.container
-	form(action='/update',method='post',enctype='multipart/form-data')
-		input(type='file',name='excel', accept='.xlsx')
-		button 전송
+	include include/header.pug
+	
+	if !body
+		h2 반갑습니다
+		
+	else if body == 'file'
+		include body/fileup.pug
+		
+	else if body == 'excel'
+		include body/excel.pug

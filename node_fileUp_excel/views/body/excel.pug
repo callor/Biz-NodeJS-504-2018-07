@@ -1,0 +1,16 @@
+article
+	table.w3-table.w3-border
+		tr.w3-border
+			th no
+			th 이름
+			th 주소
+			th 전화번호
+			th 등급
+			
+		each item,index in excel
+			tr.w3-border
+				td= index
+				td= item.이름
+				td= item.주소
+				td= item.전화번호
+				td= item.등급
