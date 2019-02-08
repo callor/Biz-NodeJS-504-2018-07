@@ -12,6 +12,7 @@
     "express": "^4.16.3",
     "express-session": "^1.15.6",
     "http-errors": "^1.6.3",
+    "mpath": ">=0.5.1",
     "mongoose": "^5.2.6",
     "morgan": "^1.9.0",
     "pug": "^2.0.3",

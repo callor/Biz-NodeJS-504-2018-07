@@ -13,6 +13,7 @@
     "express": "^4.16.3",
     "http-errors": "^1.6.3",
     "jade": "~1.11.0",
+    "mpath": ">=0.5.1",
     "mongo-xlsx": "^1.0.12",
     "mongojs": "^2.6.0",
     "mongoose": "^5.2.6",

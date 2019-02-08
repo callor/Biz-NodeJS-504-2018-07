@@ -12,6 +12,7 @@
     "express": "*",
     "express-session": "*",
     "http-errors": "*",
+    "mpath": ">=0.5.1"
     "mongoose": "*",
     "morgan": "*"
   }
