@@ -68,3 +68,4 @@ dbconfig.js
 
 # ETC
 .bak
+package-lock.json
